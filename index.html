@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Isha Mehta</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- <script src="coverage.json"></script> -->
+</head>
+<body>
+	<div class="row vehicle-coverage-tables">
+		<table cellpadding="0" border="0">
+			<thead>
+				<tr>
+					<th style="background-image:url(acura.png)" title="Acura"></th>
+					<th class="rotateParent" valign="bottom" v-for="item in years">
+						<p class="rotate ie8">{{item}}</p>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="item in vehicle_models">
+					<td>
+						{{item}}
+					</td>
+					<td class="pill" v-for="item in years" v-on:click="setPill" >&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="demo">
+	</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+<script src="script.js"></script>
+</html>
