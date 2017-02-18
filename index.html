@@ -14,17 +14,17 @@
 			<thead>
 				<tr>
 					<th style="background-image:url(acura.png)" title="Acura"></th>
-					<th class="rotateParent" valign="bottom" v-for="item in years">
+					<th class="rotateParent" valign="bottom" v-for="item in car.years">
 						<p class="rotate ie8">{{item}}</p>
 					</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr v-for="item in vehicle_models">
+				<tr v-for="item in car.vehiclemodels">
 					<td>
 						{{item}}
 					</td>
-					<td class="pill" v-for="item in years" v-on:click="setPill" >&nbsp;</td>
+					<td class="pill" v-for="item in car.years" v-on:click="setPill" >&nbsp;</td>
 				</tr>
 			</tbody>
 		</table>
@@ -33,5 +33,6 @@
 	</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+<script src="coverage.json"></script>
 <script src="script.js"></script>
 </html>
