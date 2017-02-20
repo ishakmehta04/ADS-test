@@ -24,7 +24,7 @@
 					<td>
 						{{key}}
 					</td>
-					<td v-for="items in car.years" v-on:click="setPill">
+					<td v-for="items in car.years" v-on:click="setPill(key,items)">
 						<div v-for="selectedYear in item" v-if="selectedYear == items" v-bind:class="{ 'set' : true}" class="defaultSelectedYears"> </div>
 					</td>
 				</tr>
