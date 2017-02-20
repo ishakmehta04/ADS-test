@@ -7815,7 +7815,7 @@ dl dt .vehicle-coverage-tables {
     line-height: 12px;
     width: 22px;
   }
-  .vehicle-coverage-tables td.set {
+  .vehicle-coverage-tables .set {
     background-color: #0872ba;
   }
 }
@@ -8552,4 +8552,9 @@ dl dt .vehicle-coverage-tables {
 
 .visible {
   display: block !important;
+}
+
+.defaultSelectedYears {
+  width:100%;
+  height:100%;
 }

@@ -20,11 +20,13 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr v-for="item in car.vehiclemodels">
+				<tr v-for="(item, key, index) in car.coverage">
 					<td>
-						{{item}}
+						{{key}}
 					</td>
-					<td class="pill" v-for="item in car.years" v-on:click="setPill" >&nbsp;</td>
+					<td v-for="items in car.years" v-on:click="setPill">
+						<div v-for="selectedYear in item" v-if="selectedYear == items" v-bind:class="{ 'set' : true}" class="defaultSelectedYears"> </div>
+					</td>
 				</tr>
 			</tbody>
 		</table>
