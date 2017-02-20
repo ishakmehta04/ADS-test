@@ -8,10 +8,11 @@ var VueComp = new Vue({
     },
     data: {
         car:'',
+        displayStyle: 'none',
     },
     methods: {
         setPill : function(key,item) {
-            console.log(event.target,key,item)
+            console.log(key,item)
             var index = VueComp.car.coverage[key].indexOf(JSON.parse(item))
             var targetElement = event.target
             if($(targetElement).hasClass('set')) {

@@ -23,6 +23,8 @@
 				<tr v-for="(item, key, index) in car.coverage">
 					<td>
 						{{key}}
+						
+						<span class="show-when-small">{{item.toString()}}</span>
 					</td>
 					<td v-for="items in car.years" v-on:click="setPill(key,items)">
 						<div v-for="selectedYear in item" v-if="selectedYear == items" v-bind:class="{ 'set' : true}" class="defaultSelectedYears"> </div>

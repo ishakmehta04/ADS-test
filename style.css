@@ -35,7 +35,7 @@ body {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5rem;
+  max-width: 56.5rem;
   *zoom: 1;
 }
 .row:before, .row:after {
@@ -98,169 +98,6 @@ table tfoot tr td {
 .th.radius {
   border-radius: 3px;
 }
-
-
-
-
-
-/* Specific visibility for tables */
-table.hide-for-landscape, table.show-for-portrait {
-  display: table;
-}
-
-thead.hide-for-landscape, thead.show-for-portrait {
-  display: table-header-group !important;
-}
-
-tbody.hide-for-landscape, tbody.show-for-portrait {
-  display: table-row-group !important;
-}
-
-tr.hide-for-landscape, tr.show-for-portrait {
-  display: table-row !important;
-}
-
-td.hide-for-landscape, td.show-for-portrait,
-th.hide-for-landscape,
-th.show-for-portrait {
-  display: table-cell !important;
-}
-
-@media only screen and (orientation: landscape) {
-  .show-for-landscape,
-  .hide-for-portrait {
-    display: inherit !important;
-  }
-
-  .hide-for-landscape,
-  .show-for-portrait {
-    display: none !important;
-  }
-
-  /* Specific visibility for tables */
-  table.show-for-landscape, table.hide-for-portrait {
-    display: table;
-  }
-
-  thead.show-for-landscape, thead.hide-for-portrait {
-    display: table-header-group !important;
-  }
-
-  tbody.show-for-landscape, tbody.hide-for-portrait {
-    display: table-row-group !important;
-  }
-
-  tr.show-for-landscape, tr.hide-for-portrait {
-    display: table-row !important;
-  }
-
-  td.show-for-landscape, td.hide-for-portrait,
-  th.show-for-landscape,
-  th.hide-for-portrait {
-    display: table-cell !important;
-  }
-}
-@media only screen and (orientation: portrait) {
-  .show-for-portrait,
-  .hide-for-landscape {
-    display: inherit !important;
-  }
-
-  .hide-for-portrait,
-  .show-for-landscape {
-    display: none !important;
-  }
-
-  /* Specific visibility for tables */
-  table.show-for-portrait, table.hide-for-landscape {
-    display: table;
-  }
-
-  thead.show-for-portrait, thead.hide-for-landscape {
-    display: table-header-group !important;
-  }
-
-  tbody.show-for-portrait, tbody.hide-for-landscape {
-    display: table-row-group !important;
-  }
-
-  tr.show-for-portrait, tr.hide-for-landscape {
-    display: table-row !important;
-  }
-
-  td.show-for-portrait, td.hide-for-landscape,
-  th.show-for-portrait,
-  th.hide-for-landscape {
-    display: table-cell !important;
-  }
-}
-/* Touch-enabled device targeting */
-.show-for-touch {
-  display: none !important;
-}
-
-.hide-for-touch {
-  display: inherit !important;
-}
-
-.touch .show-for-touch {
-  display: inherit !important;
-}
-
-.touch .hide-for-touch {
-  display: none !important;
-}
-
-/* Specific visibility for tables */
-table.hide-for-touch {
-  display: table;
-}
-
-.touch table.show-for-touch {
-  display: table;
-}
-
-thead.hide-for-touch {
-  display: table-header-group !important;
-}
-
-.touch thead.show-for-touch {
-  display: table-header-group !important;
-}
-
-tbody.hide-for-touch {
-  display: table-row-group !important;
-}
-
-.touch tbody.show-for-touch {
-  display: table-row-group !important;
-}
-
-tr.hide-for-touch {
-  display: table-row !important;
-}
-
-.touch tr.show-for-touch {
-  display: table-row !important;
-}
-
-td.hide-for-touch {
-  display: table-cell !important;
-}
-
-.touch td.show-for-touch {
-  display: table-cell !important;
-}
-
-th.hide-for-touch {
-  display: table-cell !important;
-}
-
-.touch th.show-for-touch {
-  display: table-cell !important;
-}
-
-
 
 .rotate {
   -webkit-transform: rotate(-90deg);
@@ -374,7 +211,16 @@ th.rotateParent .rotate, td.rotateParent .rotate {
     display: inline !important;
   }
 }
-
+@media only screen and (min-width: 64.063em) {
+  .show-when-small {
+    display: none;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .show-when-small {
+    display: inline;
+  }
+}
 .defaultSelectedYears {
   width:100%;
   height:100%;
