@@ -13,10 +13,11 @@ var VueComp = new Vue({
     methods: {
         setPill : function(key,item) {
             console.log(key,item)
-            var index = VueComp.car.coverage[key].indexOf(JSON.parse(item))
+            var index = VueComp.car.coverage[key].indexOf(item)
             var targetElement = event.target
             if($(targetElement).hasClass('set')) {
-                $(targetElement).removeClass('set')                
+                $(targetElement).removeClass('set')  
+                 $(targetElement).parent().removeClass('set')              
                 VueComp.car.coverage[key].splice(index,1)
             }
             else {
